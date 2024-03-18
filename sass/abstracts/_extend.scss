@@ -1,0 +1,33 @@
+// Shadows start
+%shadow-md {
+   box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 2px 0px;
+   transition: .2s;
+
+   &:hover{
+      box-shadow: rgba(0, 0, 0, 0.07) 0px 4px 3px 0px;
+   }
+}
+
+%shadow-lg {
+   box-shadow: rgba(0, 0, 0, 0.04) 0px 10px 8px 0px;
+   transition: .2s;
+
+   &:hover{
+   box-shadow: rgba(0, 0, 0, 0.10)0px 4px 3px 0px;
+   }
+}
+
+%shadow-2xl {
+   box-shadow: rgba(0, 0, 0, 0.06) 0px 15px 15px 0px;
+   transition: .2s;
+
+   &:hover{
+      box-shadow: rgba(0, 0, 0, 0.15)0px 25px 25px 0px;
+   }
+}
+// Shadows end
+
+
+
+
+

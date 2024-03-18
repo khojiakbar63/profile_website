@@ -1,0 +1,7 @@
+button{
+   border: 2px solid grey;
+   padding: 8px 200px;
+   background: transparent;
+   @extend %shadow-lg;
+   color: $gray-light-500
+}

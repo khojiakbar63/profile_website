@@ -1,0 +1,92 @@
+body{
+   font-family: "Inter", sans-serif;
+   font-style: normal;
+}
+
+// Typography
+// Only screen size-specific variants utilized on website are defined here.
+// Font family - inter
+
+// Heading H1
+
+%desktop-h1 {
+   font-size: 60px;
+   line-height: 72px;
+   letter-spacing: -2%;
+   font-weight: 700;
+}
+
+%tablet-h1 {
+   font-size: 48px;
+   line-height: 48px;
+   letter-spacing: -2%;
+   font-weight: 700;
+}
+
+%mobile-h1 {
+   font-size: 36px;
+   line-height: 40px;
+   font-weight: 600;
+}
+
+// Heading H2
+
+%desktop-h2 {
+   font-size: 36px;
+   line-height: 40px;
+   letter-spacing: -2%;
+   font-weight: 600;
+}
+%tablet-h2 {
+   font-size: 18px;
+   line-height: 28px;
+   letter-spacing: -2%;
+   font-weight: 600;
+}
+%mobile-h2 {
+   font-size: 18px;
+   line-height: 28px;
+   letter-spacing: -2%;
+   font-weight: 600;
+}
+
+// Heading H3
+
+%desktop-semibold-h3 {
+   font-size: 30px;
+   line-height: 36px;
+   letter-spacing: -2%;
+   font-weight: 600;
+}
+%desktop-bold-h3 {
+   font-size: 30px;
+   line-height: 36px;
+   letter-spacing: -2%;
+   font-weight: 700;
+}
+
+%tablet-semibold-h3 {
+   font-size: 24px;
+   line-height: 32px;
+   letter-spacing: -2%;
+   font-weight: 600;
+}
+%tablet-bold-h3 {
+   font-size: 24px;
+   line-height: 32px;
+   letter-spacing: -2%;
+   font-weight: 700;
+}
+
+%mobile-semibold-h3 {
+   font-size: 24px;
+   line-height: 32px;
+   letter-spacing: -2%;
+   font-weight: 600;
+}
+%mobile-bold-h3 {
+   font-size: 24px;
+   line-height: 32px;
+   letter-spacing: -2%;
+   font-weight: 600;
+}
