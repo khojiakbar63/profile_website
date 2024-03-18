@@ -90,3 +90,98 @@ body{
    letter-spacing: -2%;
    font-weight: 600;
 }
+
+// Subtle
+// All
+%all-subtle-normal{
+   font-size: 20px;
+   line-height: 28px;
+   font-weight: 400;
+}
+%all-subtle-semibold{
+   font-size: 20px;
+   line-height: 28px;
+   font-weight: 600;
+}
+
+// Tablet
+%tablet-subtle-normal{
+   font-size: 18px;
+   line-height: 28px;
+   font-weight: 400;
+}
+
+%tablet-subtle-semibold{
+   font-size: 18px;
+   line-height: 28px;
+   font-weight: 600;
+}
+// Mobile
+%mobile-subtle-normal{
+   font-size: 18px;
+   line-height: 28px;
+   font-weight: 400;
+}
+
+%mobile-subtle-semibold{
+   font-size: 18px;
+   line-height: 28px;
+   font-weight: 600;
+}
+
+// Body 1
+// All
+%all-body-1{
+   font-size: 18px;
+   line-height: 28px;
+   font-weight: 400;
+}
+// Tablet
+%tablet-body-1{
+   font-size: 16px;
+   line-height: 24px;
+   font-weight: 400;
+}
+// mobile
+%mobile-body-1{
+   font-size: 16px;
+   line-height: 24px;
+   font-weight: 400;
+}
+
+// Body-2
+// All
+%all-body-2{
+   font-size: 16px;
+   line-height: 24px;
+   font-weight: 400;
+}
+%all-body-2-underline{
+   font-size: 16px;
+   line-height: 24px;
+   font-weight: 400;
+   text-decoration: underline;
+}
+%all-body-2-md{
+   font-size: 16px;
+   line-height: 24px;
+   font-weight: 500;
+}
+%all-body-2-semi-bold{
+   font-size: 16px;
+   line-height: 24px;
+   font-weight: 600;
+}
+
+// Body-3
+// All
+%all-body-3{
+   font-style: 14px;
+   line-height: 20px;
+   font-weight: 400;
+}
+%all-body-3-md{
+   font-style: 14px;
+   line-height: 20px;
+   font-weight: 500;
+}

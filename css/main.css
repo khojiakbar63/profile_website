@@ -1,9 +1,12 @@
-button {
-  box-shadow: rgba(0, 0, 0, 0.04) 0px 10px 8px 0px;
-  transition: 0.2s;
+header .nav__right__actions, header {
+  display: flex;
+  align-items: center;
 }
-button:hover {
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 3px 0px;
+
+header .nav__right__list, header .nav__right {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 *,
@@ -22,12 +25,16 @@ li {
   text-decoration: none;
 }
 
+a {
+  text-decoration: none;
+}
+
 img {
   max-width: 100%;
 }
 
 .container {
-  width: 1200px;
+  width: 1280px;
   margin: 0 auto;
 }
 
@@ -36,11 +43,72 @@ body {
   font-style: normal;
 }
 
+header .nav__right__actions__download_btn, header .nav__right__list__item a {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+}
+
 button {
   border: 2px solid grey;
-  padding: 8px 200px;
+  padding: 8px 20px;
   background: transparent;
   color: #6b7280;
+}
+
+header {
+  background-color: #ffffff;
+  height: 68px;
+}
+header .nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 32px;
+}
+header .nav__right {
+  gap: 48px;
+}
+header .nav__right__list {
+  gap: 24px;
+}
+header .nav__right__list__item a {
+  color: #4b5563;
+}
+header .nav__right__list__item a:hover {
+  color: #111827;
+}
+header .nav__right__list__item a:active {
+  color: #4b5563;
+}
+header .nav__right__actions {
+  gap: 16px;
+}
+header .nav__right__actions__toggle_btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  transition: 0.2s;
+}
+header .nav__right__actions__toggle_btn:hover {
+  background-color: #f3f4f6;
+}
+header .nav__right__actions__toggle_btn:active {
+  background-color: #e5e7eb;
+}
+header .nav__right__actions__download_btn {
+  background-color: #111827;
+  border-radius: 12px;
+  padding: 8px 16px;
+  border: none;
+  color: #f9fafb;
+  transition: 0.2s;
+}
+header .nav__right__actions__download_btn:hover {
+  background: #374151;
+}
+header .nav__right__actions__download_btn:active {
+  background: #1f2937;
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */

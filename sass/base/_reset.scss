@@ -8,6 +8,8 @@
    padding: 0;
  }
  
+
+ 
  ol, ul {
    list-style: none;
  }
@@ -15,13 +17,15 @@
  li{
    text-decoration: none;
  }
-
+a{
+  text-decoration: none;
+}
  img {
    max-width: 100%;
  }
 
  .container{
-  width: 1200px;
+  width: 1280px;
   margin: 0 auto;
  }
  

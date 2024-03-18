@@ -1,0 +1,71 @@
+header{
+   background-color: $gray-light-default;
+   height: 68px;
+   @extend %align-center;
+   .nav{
+      display: flex; 
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 32px;
+
+      &__right{
+            @extend %justify-between;
+            gap: 48px;
+         &__list{
+            @extend %justify-between;
+            gap: 24px;
+
+            &__item{
+               a{
+                  @extend %all-body-2-md;
+                  color: $gray-light-600;
+                  &:hover{
+                     color: $gray-light-900;
+                  }
+                  &:active{
+                     color: $gray-light-600;
+                  }
+               }
+            }
+         }
+         &__actions{
+            @extend %align-center;
+            gap: 16px;
+
+            &__toggle_btn{
+               width: 36px;
+               height: 36px;
+               border-radius: 8px;
+               transition: .2s;
+
+
+               &:hover{
+                  background-color: $gray-light-100;
+               }
+               &:active{
+                  background-color: $gray-light-200;
+               }
+            }
+
+            &__download_btn{
+               background-color: $gray-light-900;
+               border-radius: 12px;
+               padding: 8px 16px;
+               border: none;
+               color: $gray-light-50;
+               @extend %all-body-2-md;
+               transition: .2s;
+
+               &:hover{
+                  background: $gray-light-700;
+               }
+               &:active{
+                  background: $gray-light-800;
+               }
+            }
+         }
+      }
+
+    
+   }
+}

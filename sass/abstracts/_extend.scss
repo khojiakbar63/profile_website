@@ -27,7 +27,16 @@
 }
 // Shadows end
 
-
+// Justify-between
+%align-center{
+   display: flex;
+   align-items: center;
+}
+%justify-between{
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
 
 
 
