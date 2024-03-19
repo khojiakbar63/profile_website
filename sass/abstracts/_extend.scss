@@ -54,5 +54,16 @@
 
 }
 
+// Section title
+%section-title{
+   padding: 4px 20px;
+   background-color: $gray-light-200;
+   display: inline-block;
+   border-radius: 12px;
+   color: $gray-light-600;
+   @extend %all-body-3-md;
+   text-align: center;
+}
+
 
 

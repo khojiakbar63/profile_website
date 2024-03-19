@@ -1,0 +1,18 @@
+
+
+@mixin photo-hover($w, $h, $transform){
+   max-width: $w;
+   max-height: $h;
+   margin: 10px;
+   background: $gray-light-200;
+
+   img{
+      transition: .3s ease-in-out;
+   }
+   &:hover{
+      img{
+         transform: $transform;
+   
+      }
+   }
+}
