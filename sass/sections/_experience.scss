@@ -1,0 +1,34 @@
+#experience {
+   .block{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .experience__title{
+         @extend %all-body-3-md;
+         @extend %section-title;
+         margin-bottom: 16px;
+      }
+      .experience__desc{
+         @extend %all-subtle-normal;
+         margin-bottom: 48px;
+      }
+   }
+      .cards{
+         .card{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: start;
+            .empty-box{
+               width: 48px;
+            }
+            &__content{
+               &__title{
+                 @extend %all-subtle-semibold;
+               }
+            }
+         }
+      }
+}
