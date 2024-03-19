@@ -38,5 +38,21 @@
    justify-content: space-between;
 }
 
+// Icon shadow / active
+
+%md-icon-bg-lightmode{
+   width: 36px;
+   height: 36px;
+   border-radius: 8px;
+   transition: .2s;
+   &:hover{
+      background-color: $gray-light-100;
+   }
+   &:active{
+      background-color: $gray-light-200;
+   }
+
+}
+
 
 

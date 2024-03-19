@@ -6,7 +6,6 @@ header{
       display: flex; 
       align-items: center;
       justify-content: space-between;
-      padding: 0 32px;
 
       &__right{
             @extend %justify-between;
@@ -33,18 +32,7 @@ header{
             gap: 16px;
 
             &__toggle_btn{
-               width: 36px;
-               height: 36px;
-               border-radius: 8px;
-               transition: .2s;
-
-
-               &:hover{
-                  background-color: $gray-light-100;
-               }
-               &:active{
-                  background-color: $gray-light-200;
-               }
+               @extend %md-icon-bg-lightmode;
             }
 
             &__download_btn{
