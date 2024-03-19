@@ -3,7 +3,7 @@
   align-items: center;
 }
 
-#about .wrapper .content .lists, #about .wrapper, header .nav__right__list, header .nav__right {
+#skills .slider__container .slider, #about .wrapper .content .lists, #about .wrapper, header .nav__right__list, header .nav__right {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -22,7 +22,7 @@
   background-color: #e5e7eb;
 }
 
-#about .block .about__title {
+#skills .block .skills__title, #about .block .about__title {
   padding: 4px 20px;
   background-color: #e5e7eb;
   display: inline-block;
@@ -73,6 +73,12 @@ body {
   font-weight: 600;
 }
 
+#skills .slider__container .slider .slide p {
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 400;
+}
+
 #about .wrapper .content .lists, #about .wrapper .content p, #intro .content__extra__info .wrapper p, #intro .content__desc {
   font-size: 16px;
   line-height: 24px;
@@ -85,7 +91,7 @@ header .nav__right__actions__download_btn, header .nav__right__list__item a {
   font-weight: 500;
 }
 
-#about .block .about__title {
+#skills .block .skills__title, #about .block .about__title {
   font-style: 14px;
   line-height: 20px;
   font-weight: 500;
@@ -257,6 +263,36 @@ header .nav__right__actions__download_btn:active {
   flex-direction: column;
   gap: 10px;
   color: #4b5563;
+}
+
+#skills {
+  padding: 96px 0;
+}
+#skills .block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#skills .block .skills__title {
+  margin-bottom: 16px;
+}
+#skills .block .skills__desc {
+  color: #4b5563;
+  margin-bottom: 48px;
+}
+#skills .slider__container {
+  margin-bottom: 48px;
+}
+#skills .slider__container .slider .slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+#skills .slider__container .slider .slide p {
+  color: #4b5563;
+  text-transform: capitalize;
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
