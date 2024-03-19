@@ -1,0 +1,127 @@
+#work {
+   background-color: $gray-light-default;
+   padding: 96px 0;
+   .block{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .work__title{
+         @extend %all-body-3-md;
+         @extend %section-title;
+         margin-bottom: 16px;
+      }
+      .work__desc{
+         @extend %all-subtle-normal;
+         color: $gray-light-600;
+         margin-bottom: 48px;
+      }
+   }
+
+   .cards{
+      display: flex;
+      flex-direction: column;
+      gap: 48px;
+      .card{
+         display: flex;
+         @extend %shadow-md;
+         border-radius: 12px;
+   
+   
+         &__left{
+            padding: 48px;
+            width: 50%;
+            background-color: $gray-light-100;
+            border-radius: 12px 0 0 12px;
+            img{
+               mix-blend-mode: multiply;
+               &:hover{
+                  cursor: pointer;
+               }
+            }
+   
+         }
+         &__right{
+            width: 50%;
+            padding: 48px;
+            background-color: $gray-light-default;
+            border-radius: 0 12px 12px 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            
+            &__title{
+               @extend %all-subtle-semibold;
+               color: $gray-light-900;
+               margin-bottom: 24px;
+   
+            }
+            &__desc{
+               max-width: 480px;
+               @extend %all-body-2;
+               color: $gray-light-600;
+               margin-bottom: 24px;
+            }
+            .technologies {
+               display: flex;
+               flex-wrap: wrap;
+               gap: 8px;
+               margin-bottom: 24px;
+               
+               .block{
+   
+                  h4{
+                     @extend %all-body-3-md;
+                     @extend %section-title;
+                     transition: .3s;
+                     &:hover{
+                        background-color: $gray-light-300;
+                        cursor: pointer;
+                     }
+                  }
+               }
+            }
+            .external-link{
+               width: 24px;
+               height: 24px;
+               @extend %md-icon-bg-lightmode;
+               &:hover{
+                  cursor: pointer;
+               }
+               
+            }
+         }
+         
+      }
+      .nasiya{
+         .card__left{
+            background-color: $gray-light-default;
+            .technologies {
+               display: flex;
+               flex-wrap: wrap;
+               gap: 8px;
+               margin-bottom: 24px;
+               
+               .block{
+   
+                  h4{
+                     @extend %all-body-3-md;
+                     @extend %section-title;
+                     transition: .3s;
+                     &:hover{
+                        background-color: $gray-light-300;
+                        cursor: pointer;
+                     }
+                  }
+               }
+            }
+         }
+         .card__right{
+            background-color: $gray-light-100;
+            img{
+               mix-blend-mode: multiply;
+               cursor: pointer;
+            }
+         }
+      }
+   }
+}

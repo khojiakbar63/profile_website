@@ -1,3 +1,11 @@
+#work .cards .card, #experience .cards .card {
+  box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 2px 0px;
+  transition: 0.2s;
+}
+#work .cards .card:hover, #experience .cards .card:hover {
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 4px 3px 0px;
+}
+
 #intro .content__extra__info .wrapper, header .nav__right__actions, header {
   display: flex;
   align-items: center;
@@ -9,20 +17,20 @@
   justify-content: space-between;
 }
 
-#intro .content__platforms__platform, header .nav__right__actions__toggle_btn {
+#work .cards .card__right .external-link, #intro .content__platforms__platform, header .nav__right__actions__toggle_btn {
   width: 36px;
   height: 36px;
   border-radius: 8px;
   transition: 0.2s;
 }
-#intro .content__platforms__platform:hover, header .nav__right__actions__toggle_btn:hover {
+#work .cards .card__right .external-link:hover, #intro .content__platforms__platform:hover, header .nav__right__actions__toggle_btn:hover {
   background-color: #f3f4f6;
 }
-#intro .content__platforms__platform:active, header .nav__right__actions__toggle_btn:active {
+#work .cards .card__right .external-link:active, #intro .content__platforms__platform:active, header .nav__right__actions__toggle_btn:active {
   background-color: #e5e7eb;
 }
 
-#experience .block .experience__title, #skills .block .skills__title, #about .block .about__title {
+#work .cards .nasiya .card__left .technologies .block h4, #work .cards .card__right .technologies .block h4, #work .block .work__title, #experience .block .experience__title, #skills .block .skills__title, #about .block .about__title {
   padding: 4px 20px;
   background-color: #e5e7eb;
   display: inline-block;
@@ -73,13 +81,13 @@ body {
   font-weight: 600;
 }
 
-#experience .block .experience__desc {
+#work .block .work__desc, #experience .block .experience__desc {
   font-size: 20px;
   line-height: 28px;
   font-weight: 400;
 }
 
-#experience .cards .card__content__title {
+#work .cards .card__right__title, #experience .cards .card__content__title {
   font-size: 20px;
   line-height: 28px;
   font-weight: 600;
@@ -91,7 +99,7 @@ body {
   font-weight: 400;
 }
 
-#about .wrapper .content .lists, #about .wrapper .content p, #intro .content__extra__info .wrapper p, #intro .content__desc {
+#work .cards .card__right__desc, #experience .cards .card p, #experience .cards .card__content__list__item, #about .wrapper .content .lists, #about .wrapper .content p, #intro .content__extra__info .wrapper p, #intro .content__desc {
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
@@ -103,7 +111,7 @@ header .nav__right__actions__download_btn, header .nav__right__list__item a {
   font-weight: 500;
 }
 
-#experience .block .experience__title, #skills .block .skills__title, #about .block .about__title {
+#work .cards .nasiya .card__left .technologies .block h4, #work .cards .card__right .technologies .block h4, #work .block .work__title, #experience .block .experience__title, #skills .block .skills__title, #about .block .about__title {
   font-style: 14px;
   line-height: 20px;
   font-weight: 500;
@@ -307,6 +315,10 @@ header .nav__right__actions__download_btn:active {
   text-transform: capitalize;
 }
 
+#experience {
+  padding: 96px 0;
+  background-color: #f9fafb;
+}
 #experience .block {
   display: flex;
   flex-direction: column;
@@ -319,15 +331,145 @@ header .nav__right__actions__download_btn:active {
 #experience .block .experience__desc {
   margin-bottom: 48px;
 }
+#experience .cards {
+  margin: 0 auto;
+  width: 896px;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
 #experience .cards .card {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   align-items: start;
+  justify-content: space-between;
+  border-radius: 12px;
+  padding: 32px;
+  background-color: #ffffff;
+}
+#experience .cards .card img {
+  width: 140px;
 }
 #experience .cards .card .empty-box {
   width: 48px;
 }
+#experience .cards .card__content {
+  width: 384px;
+}
+#experience .cards .card__content__title {
+  margin-bottom: 16px;
+}
+#experience .cards .card__content__list {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+#experience .cards .card__content__list__item {
+  color: #4b5563;
+  margin-bottom: 4px;
+}
+#experience .cards .card p {
+  color: #374151;
+}
+
+#work {
+  background-color: #ffffff;
+  padding: 96px 0;
+}
+#work .block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#work .block .work__title {
+  margin-bottom: 16px;
+}
+#work .block .work__desc {
+  color: #4b5563;
+  margin-bottom: 48px;
+}
+#work .cards {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+#work .cards .card {
+  display: flex;
+  border-radius: 12px;
+}
+#work .cards .card__left {
+  padding: 48px;
+  width: 50%;
+  background-color: #f3f4f6;
+  border-radius: 12px 0 0 12px;
+}
+#work .cards .card__left img {
+  mix-blend-mode: multiply;
+}
+#work .cards .card__left img:hover {
+  cursor: pointer;
+}
+#work .cards .card__right {
+  width: 50%;
+  padding: 48px;
+  background-color: #ffffff;
+  border-radius: 0 12px 12px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+#work .cards .card__right__title {
+  color: #111827;
+  margin-bottom: 24px;
+}
+#work .cards .card__right__desc {
+  max-width: 480px;
+  color: #4b5563;
+  margin-bottom: 24px;
+}
+#work .cards .card__right .technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+#work .cards .card__right .technologies .block h4 {
+  transition: 0.3s;
+}
+#work .cards .card__right .technologies .block h4:hover {
+  background-color: #d1d5db;
+  cursor: pointer;
+}
+#work .cards .card__right .external-link {
+  width: 24px;
+  height: 24px;
+}
+#work .cards .card__right .external-link:hover {
+  cursor: pointer;
+}
+#work .cards .nasiya .card__left {
+  background-color: #ffffff;
+}
+#work .cards .nasiya .card__left .technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+#work .cards .nasiya .card__left .technologies .block h4 {
+  transition: 0.3s;
+}
+#work .cards .nasiya .card__left .technologies .block h4:hover {
+  background-color: #d1d5db;
+  cursor: pointer;
+}
+#work .cards .nasiya .card__right {
+  background-color: #f3f4f6;
+}
+#work .cards .nasiya .card__right img {
+  mix-blend-mode: multiply;
+  cursor: pointer;
+}
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */

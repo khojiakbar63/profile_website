@@ -1,4 +1,6 @@
 #experience {
+   padding: 96px 0;
+   background-color: $gray-light-50;
    .block{
       display: flex;
       flex-direction: column;
@@ -16,18 +18,48 @@
       }
    }
       .cards{
+         margin: 0 auto;
+         width: 896px;
+         display: flex;
+         flex-direction: column;
+         gap: 48px;
          .card{
             display: flex;
             flex-direction: row;
-            justify-content: space-between;
             align-items: start;
+            justify-content: space-between;
+            border-radius: 12px;
+            padding: 32px;
+            background-color: $gray-light-default;
+            @extend %shadow-md;
+            img{
+               width: 140px;
+            }
             .empty-box{
                width: 48px;
             }
             &__content{
+               width: 384px;
                &__title{
                  @extend %all-subtle-semibold;
+                 margin-bottom: 16px;
+
                }
+
+               &__list {
+                  list-style-type: disc;
+                  margin-left: 20px;
+                  &__item{
+                     @extend %all-body-2;
+                     color: $gray-light-600;
+                     margin-bottom: 4px;
+
+                  }
+               }
+            }
+            p{
+               @extend %all-body-2;
+               color:  $gray-light-700;
             }
          }
       }
