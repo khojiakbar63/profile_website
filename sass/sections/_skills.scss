@@ -8,6 +8,7 @@
 
       .skills__title{
          @extend %section-title;
+         @extend %all-body-3-md;
          margin-bottom: 16px;
       }
       .skills__desc{

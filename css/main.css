@@ -1,8 +1,8 @@
-#work .cards .card, #experience .cards .card {
+#testimonials .cards .card, #work .cards .card, #experience .cards .card {
   box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 2px 0px;
   transition: 0.2s;
 }
-#work .cards .card:hover, #experience .cards .card:hover {
+#testimonials .cards .card:hover, #work .cards .card:hover, #experience .cards .card:hover {
   box-shadow: rgba(0, 0, 0, 0.07) 0px 4px 3px 0px;
 }
 
@@ -30,7 +30,7 @@
   background-color: #e5e7eb;
 }
 
-#work .cards .nasiya .card__left .technologies .block h4, #work .cards .card__right .technologies .block h4, #work .block .work__title, #experience .block .experience__title, #skills .block .skills__title, #about .block .about__title {
+#testimonials .block .testimonials__title, #work .cards .nasiya .card__left .technologies .block h4, #work .cards .card__right .technologies .block h4, #work .block .work__title, #experience .block .experience__title, #skills .block .skills__title, #about .block .about__title {
   padding: 4px 20px;
   background-color: #e5e7eb;
   display: inline-block;
@@ -81,13 +81,13 @@ body {
   font-weight: 600;
 }
 
-#work .block .work__desc, #experience .block .experience__desc {
+#testimonials .block .testimonials__desc, #work .block .work__desc, #experience .block .experience__desc {
   font-size: 20px;
   line-height: 28px;
   font-weight: 400;
 }
 
-#work .cards .card__right__title, #experience .cards .card__content__title {
+#testimonials .cards .card h4, #work .cards .card__right__title, #experience .cards .card__content__title {
   font-size: 20px;
   line-height: 28px;
   font-weight: 600;
@@ -99,7 +99,7 @@ body {
   font-weight: 400;
 }
 
-#work .cards .card__right__desc, #experience .cards .card p, #experience .cards .card__content__list__item, #about .wrapper .content .lists, #about .wrapper .content p, #intro .content__extra__info .wrapper p, #intro .content__desc {
+#testimonials .cards .card p, #work .cards .card__right__desc, #experience .cards .card p, #experience .cards .card__content__list__item, #about .wrapper .content .lists, #about .wrapper .content p, #intro .content__extra__info .wrapper p, #intro .content__desc {
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
@@ -111,7 +111,13 @@ header .nav__right__actions__download_btn, header .nav__right__list__item a {
   font-weight: 500;
 }
 
-#work .cards .nasiya .card__left .technologies .block h4, #work .cards .card__right .technologies .block h4, #work .block .work__title, #experience .block .experience__title, #skills .block .skills__title, #about .block .about__title {
+#testimonials .cards .card small {
+  font-style: 14px;
+  line-height: 20px;
+  font-weight: 400;
+}
+
+#work .cards .nasiya .card__left .technologies .block h4, #work .cards .card__right .technologies .block h4, #work .block .work__title, #experience .block .experience__title, #testimonials .block .testimonials__title, #skills .block .skills__title, #about .block .about__title {
   font-style: 14px;
   line-height: 20px;
   font-weight: 500;
@@ -468,6 +474,49 @@ header .nav__right__actions__download_btn:active {
 #work .cards .nasiya .card__right img {
   mix-blend-mode: multiply;
   cursor: pointer;
+}
+
+#testimonials {
+  background-color: #f9fafb;
+  padding: 96px 0;
+}
+#testimonials .block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#testimonials .block .testimonials__title {
+  margin-bottom: 16px;
+}
+#testimonials .block .testimonials__desc {
+  margin-bottom: 48px;
+}
+#testimonials .cards {
+  display: flex;
+  gap: 48px;
+}
+#testimonials .cards .card {
+  padding: 48px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 373.33px;
+  background-color: #ffffff;
+}
+#testimonials .cards .card img {
+  margin-bottom: 24px;
+}
+#testimonials .cards .card p {
+  margin-bottom: 24px;
+  color: #4b5563;
+}
+#testimonials .cards .card h4 {
+  color: #111827;
+  margin-bottom: 4px;
+}
+#testimonials .cards .card small {
+  color: #4b5563;
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
