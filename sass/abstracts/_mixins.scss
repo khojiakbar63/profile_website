@@ -16,3 +16,18 @@
       }
    }
 }
+
+// Icon shadow / active
+
+%md-icon-bg-lightmode{
+   padding: 36px;
+   border-radius: 8px;
+   transition: .2s;
+   &:hover{
+      background-color: $gray-light-100;
+   }
+   &:active{
+      background-color: $gray-light-200;
+   }
+
+}

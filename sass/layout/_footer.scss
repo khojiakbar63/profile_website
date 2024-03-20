@@ -1,0 +1,17 @@
+footer{
+   background-color: $gray-light-50;
+   padding: 24px 0;
+   .copyright{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      small{
+         color: $gray-light-600;
+         @extend %all-body-3;
+         a{
+            color: $gray-light-600;
+            text-decoration: underline;
+         }
+      }
+   }
+}
