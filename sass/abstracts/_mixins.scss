@@ -1,5 +1,5 @@
 
-
+// lightmode photo
 @mixin photo-hover($w, $h, $transform){
    max-width: $w;
    max-height: $h;
@@ -8,19 +8,39 @@
 
    img{
       transition: .3s ease-in-out;
+      transform: translateX(-40px) translateY(-40px)
    }
    &:hover{
       img{
          transform: $transform;
-   
+      }
+   }
+}
+
+// darkmode photo
+@mixin photo-hover-darkmode($w, $h, $transform){
+   max-width: $w;
+   max-height: $h;
+   margin: 10px;
+   background: $gray-dark-200;
+
+   img{
+      background-color: red;
+      transition: .3s ease-in-out;
+      transform: translateX(-40px) translateY(-40px)
+   }
+   &:hover{
+      img{
+         transform: $transform;
       }
    }
 }
 
 // Icon shadow / active
 
-%md-icon-bg-lightmode{
-   padding: 36px;
+@mixin md-icon-bg-lightmode($p){
+   padding: $p;
+   padding: 5px;
    border-radius: 8px;
    transition: .2s;
    &:hover{
@@ -29,5 +49,19 @@
    &:active{
       background-color: $gray-light-200;
    }
-
 }
+@mixin md-icon-bg-darkmode($p){
+   padding: $p;
+   padding: 5px;
+   border-radius: 8px;
+   transition: .2s;
+   &:hover{
+      background-color: $gray-dark-100;
+   }
+   &:active{
+      background-color: $gray-dark-200;
+   }
+}
+
+// Media query  769 , 576 , 375 
+

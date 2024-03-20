@@ -34,6 +34,10 @@
             @extend %shadow-md;
             img{
                width: 140px;
+               transition: .3s;
+               &:hover{
+                  transform: scale(1.1);
+               }
             }
             .empty-box{
                width: 48px;
@@ -63,4 +67,38 @@
             }
          }
       }
+}
+
+@media(prefers-color-scheme: dark){
+   #experience {
+      background-color: #111827;
+      .block{
+         .experience__title{
+         }
+         .experience__desc{
+            color: $gray-light-default;
+         }
+      }
+         .cards{
+            .card{
+               background-color: #1F2937;
+               color: $gray-light-default;
+               &__content{
+
+   
+                  &__list {
+                     &__item{
+                         color: $gray-light-default;
+
+                     }
+                  }
+               }
+               p{
+                  color:  $gray-light-default;
+               }
+            }
+         }
+   }
+   
+
 }

@@ -27,7 +27,20 @@
                flex-direction: column;
                align-items: center;
                gap: 8px;
-            img{
+
+               img{
+                  transition: .3s;
+
+                  &:hover{
+                     transform: scale(1.1)
+                  }
+               }
+               .express-darkmode{
+                  display: block;
+               }
+               .express-lightmode{
+                  display: none;
+               }
 
             }
 
@@ -39,4 +52,32 @@
          }
       }
    }
+
+@media (prefers-color-scheme: dark){
+   #skills{
+      background-color: $gray-dark-default;
+
+      .block{ 
+         .skills__desc{
+            color: $gray-dark-600;
+         }
+      }
+   
+      .slider__container{
+         .slider{
+               @extend %justify-between;
+   
+               p{ 
+                  color: $gray-dark-600;
+               }
+               .express-lightmode{
+                  display: block;
+               }
+               .express-darkmode{
+                  display: none;
+               }
+            }
+         }
+      }
+    
 }

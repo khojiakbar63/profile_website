@@ -6,10 +6,9 @@
 
 #intro{
    background-color: $gray-light-default;
-   padding: 96px 0;
- 
+   padding: 164px 0 96px 0;
+
    .content{
-      max-width: 768px;
       align-self: flex-start;
 
       &__title {
@@ -17,12 +16,13 @@
          line-height: 72px;
          letter-spacing: -2%;
          font-weight: 700;
-         color: $gray-light-900;
+         color: $gray-light-600;
 
       }
       &__desc {
          @extend %all-body-2;
          margin: 8px 0 48px 0;
+         color: $gray-light-600;
 
       }
       &__extra__info {
@@ -31,14 +31,13 @@
          display: flex;
          flex-direction: column;
          gap: 8px;
-
+         color: $gray-light-600;
          .wrapper{
             @extend %align-center;
             gap: 8px;
 
             .green__circle{
                margin: 8px;
-             
             }
             
             p{
@@ -51,18 +50,67 @@
          display: flex;
          gap: 4px;
          &__platform{
-            @extend %md-icon-bg-lightmode;
+            @include md-icon-bg-lightmode(5px);
             img{
                margin: 6px;
+            }
+            .platform_dark{
+               display: none;
             }
          }
       }
    }
 
    .intro__image{
-      @include photo-hover(280px, 320px, translateX(-40px) translateY(-40px));
+      @include photo-hover(280px, 320px, translateX(-5px) translateY(-5px));
 
       margin: 10px;
       background: $gray-light-200;
    }
 }
+
+// DARKMODE
+@media (prefers-color-scheme: dark){
+   #intro{
+      background-color: $gray-dark-default;
+   
+    
+      .content{
+   
+         &__title {
+            color: $gray-dark-600;
+         }
+         &__desc{
+            color: $gray-dark-600;
+         }
+         &__extra__info{
+            color: $gray-dark-600;
+
+         }
+         &__platforms{
+            &__platform{
+               @include md-icon-bg-lightmode(5px);
+               img{
+                  margin: 6px;
+               }
+               .platform_dark{
+                  display: block;
+               }
+               .platform_light{
+                  display: none;
+               }
+            }
+         }
+      }
+   
+      .intro__image{
+         @include photo-hover-darkmode(280px, 320px, translateX(-5px) translateY(-5px));
+   
+         margin: 10px;
+         background: $gray-dark-200;
+      }
+   }
+}
+
+
+// MEDIA QUERIES

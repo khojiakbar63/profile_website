@@ -1,12 +1,19 @@
 header{
-   background-color: $gray-light-default;
+   background-color:#ffffff8d;
    height: 68px;
    @extend %align-center;
+   position: fixed;
+   top: 0;
+   left: 0;
+   right: 0;
+   z-index: 9999;
+   backdrop-filter: blur(10px);
+
    .nav{
       display: flex; 
       align-items: center;
       justify-content: space-between;
-
+   
       &__right{
             @extend %justify-between;
             gap: 48px;
@@ -32,7 +39,12 @@ header{
             gap: 16px;
 
             &__toggle_btn{
-               @extend %md-icon-bg-lightmode;
+               @include md-icon-bg-lightmode(5px);
+               display: flex;
+               align-items: center;
+               .moon{
+                  display: none;
+               }
             }
 
             &__download_btn{
@@ -56,4 +68,74 @@ header{
 
     
    }
+}
+
+@media (prefers-color-scheme: dark){
+   header{
+      background-color: $gray-dark-default;
+      .nav{
+         .nav__logo__light{
+            display: none;
+         }
+         &__right{
+            &__list{ 
+               &__item{
+                  a{
+                     color: $gray-dark-600;
+                     &:hover{
+                        color: $gray-dark-900;
+                     }
+                     &:active{
+                        color: $gray-dark-600;
+                     }
+                  }
+               }
+            }
+            &__actions{
+   
+               &__toggle_btn{
+                  @include md-icon-bg-lightmode(5px);
+                  display: flex;
+                  align-items: center;
+                  .moon{
+                     display: block;
+                  }
+                  .sun{
+                     display: none;
+                  }
+               }
+   
+               &__download_btn{
+                  background-color: $gray-light-900;
+                  color: $gray-light-50;
+   
+                  &:hover{
+                     background: $gray-dark-700;
+                  }
+                  &:active{
+                     background: $gray-dark-800;
+                  }
+               }
+            }
+         }
+      
+      }
+   }
+}
+
+
+@media (min-width: $layout-mobile) {
+   
+   .nav__right {
+      display: none !important;
+     
+   }
+
+}
+@media (min-width: $layout-desktop) {
+   
+   .nav__right{
+      display: flex !important;
+   }
+
 }

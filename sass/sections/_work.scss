@@ -33,9 +33,11 @@
             background-color: $gray-light-100;
             border-radius: 12px 0 0 12px;
             img{
+               transition: .3s;
                mix-blend-mode: multiply;
                &:hover{
                   cursor: pointer;
+                  transform: scale(.98);
                }
             }
    
@@ -81,9 +83,9 @@
                }
             }
             .external-link{
-               width: 24px;
-               height: 24px;
-               @extend %md-icon-bg-lightmode;
+               width: 32px;
+               height: 32px;
+               @include md-icon-bg-lightmode(5px);
                &:hover{
                   cursor: pointer;
                }
@@ -101,6 +103,7 @@
                gap: 8px;
                margin-bottom: 24px;
                
+               
                .block{
    
                   h4{
@@ -114,12 +117,93 @@
                   }
                }
             }
+            .external-link{
+               @include md-icon-bg-lightmode(5px);
+           }
          }
          .card__right{
             background-color: $gray-light-100;
             img{
                mix-blend-mode: multiply;
-               cursor: pointer;
+               transition: .3s;
+               &:hover{
+                  cursor: pointer;
+                  transform: scale(.98);
+               }
+            }
+         }
+      }
+   }
+}
+
+@media(prefers-color-scheme: dark){
+   #work {
+      background-color: $gray-light-950;
+      .block{
+         .work__desc{
+            color: $gray-dark-600;
+         }
+      }
+   
+      .cards{
+         .card{
+            background: $gray-light-800;
+            &__left{
+                background-color: #1F2937;
+               
+               }
+      
+           
+            &__right{
+               background-color: #1F2937;
+
+               
+               &__title{
+                  color: $gray-dark-900;
+               }
+               &__desc{
+                  color: $gray-dark-600;
+               }
+               .technologies {
+                  
+                  .block{
+      
+                     h4{
+                        &:hover{
+                           background-color: $gray-light-500;
+                        }
+                     }
+                  }
+               }
+               .external-link{
+                  @include md-icon-bg-lightmode(5px);
+                  
+               }
+            }
+            
+         }
+         .nasiya{
+            background-color: #1F2937;
+            .card__left{
+               background-color: #1F2937;
+               .technologies {
+                                   
+                  .block{
+      
+                     h4{
+                        &:hover{
+                           background-color: $gray-light-500;
+                        }
+                     }
+                  }
+               }
+               .external-link{
+                  @include md-icon-bg-darkmode(5px);
+              }
+            }
+            .card__right{
+               background-color: $gray-dark-100;
+               
             }
          }
       }
