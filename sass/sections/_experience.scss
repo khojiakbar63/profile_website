@@ -19,13 +19,11 @@
    }
       .cards{
          margin: 0 auto;
-         width: 896px;
          display: flex;
          flex-direction: column;
          gap: 48px;
          .card{
             display: flex;
-            flex-direction: row;
             align-items: start;
             justify-content: space-between;
             border-radius: 12px;
@@ -43,7 +41,7 @@
                width: 48px;
             }
             &__content{
-               width: 384px;
+               max-width: 384px;
                &__title{
                  @extend %all-subtle-semibold;
                  margin-bottom: 16px;
@@ -101,4 +99,15 @@
    }
    
 
+}
+
+
+
+@media (min-width: $layout-desktop) {
+   .cards {
+      .card{
+         display: flex;
+         // flex-direction: row;
+      }
+   }
 }

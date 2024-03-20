@@ -19,8 +19,10 @@
 
    .slider__container{
          margin-bottom: 48px;
+
       .slider{
-            @extend %justify-between;
+         display: grid;
+         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
 
          .slide{
                display: flex;
@@ -65,7 +67,9 @@
    
       .slider__container{
          .slider{
-               @extend %justify-between;
+               display: flex;
+               align-items: center;
+               justify-content: space-between;
    
                p{ 
                   color: $gray-dark-600;

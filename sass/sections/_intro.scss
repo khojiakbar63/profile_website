@@ -5,24 +5,27 @@
 }
 
 #intro{
+   width: 100%;
    background-color: $gray-light-default;
    padding: 164px 0 96px 0;
 
+ .wrapper{
+   display: flex;
+   gap: 100px;
    .content{
       align-self: flex-start;
 
       &__title {
-         font-size: 60px;
-         line-height: 72px;
-         letter-spacing: -2%;
-         font-weight: 700;
-         color: $gray-light-600;
+         @extend %desktop-h1 ;
+         color: $gray-light-900;
 
       }
       &__desc {
          @extend %all-body-2;
          margin: 8px 0 48px 0;
          color: $gray-light-600;
+         max-width: 768px;
+
 
       }
       &__extra__info {
@@ -63,10 +66,12 @@
 
    .intro__image{
       @include photo-hover(280px, 320px, translateX(-5px) translateY(-5px));
-
       margin: 10px;
       background: $gray-light-200;
+      z-index: 999;
    }
+ }
+   
 }
 
 // DARKMODE
@@ -114,3 +119,56 @@
 
 
 // MEDIA QUERIES
+@media (min-width: $layout-mobile) {
+   
+   #intro{
+   
+    .wrapper{
+      display: flex;
+      // flex-direction: column-reverse;
+      .content{
+         align-self: flex-start;
+   
+         &__title {
+            font-weight: 600;
+            font-size: 36px;
+            font-weight: 40px;
+            letter-spacing: -2%;
+            color: $gray-light-900;
+   
+         }
+         .content__extra__info{
+            .wrapper{
+               display: flex;
+               flex-direction: row;
+            }
+         }
+ 
+      }
+   
+      .intro__image{
+         @include photo-hover(380px, 320px, translateX(-5px) translateY(-5px));
+         margin: 10px;
+         background: $gray-light-200;
+         z-index: 999;
+      }
+    }
+      
+   }
+
+}
+
+@media (max-width: $layout-desktop) {
+   .wrapper{
+      display: flex;
+      flex-direction: row;
+   }  
+
+}
+@media (max-width: $layout-tablet) {
+   .wrapper{
+      display: flex;
+      flex-direction: column-reverse;
+   }  
+
+}

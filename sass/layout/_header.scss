@@ -1,21 +1,23 @@
 header{
    background-color:#ffffff8d;
    height: 68px;
-   @extend %align-center;
    position: fixed;
    top: 0;
    left: 0;
    right: 0;
    z-index: 9999;
    backdrop-filter: blur(10px);
+   padding-top: 15px;
 
    .nav{
-      display: flex; 
+      display: flex;
       align-items: center;
       justify-content: space-between;
-   
+      .nav__logo__dark{
+         display: none;
+      }
       &__right{
-            @extend %justify-between;
+
             gap: 48px;
          &__list{
             @extend %justify-between;
@@ -77,6 +79,9 @@ header{
          .nav__logo__light{
             display: none;
          }
+         .nav__logo__dark{
+            display: block;
+         }
          &__right{
             &__list{ 
                &__item{
@@ -128,10 +133,10 @@ header{
    
    .nav__right {
       display: none !important;
-     
    }
 
 }
+
 @media (min-width: $layout-desktop) {
    
    .nav__right{

@@ -27,6 +27,7 @@
          flex-direction: column;
          align-items: center;
          width: 373.33px;
+         height: 428px;
          background-color: $gray-light-default;
          @extend %shadow-md;
 
@@ -59,8 +60,8 @@
       .block{
          .testimonials__desc{
             color: $gray-light-default;
-            border: 1px solid #fff;
-            display: block;
+            // border: 1px solid #fff;
+            // display: block;
             padding: 0 420px;
          }
       }

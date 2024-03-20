@@ -1,5 +1,5 @@
 
-// lightmode photo
+// lightmode photo for intro
 @mixin photo-hover($w, $h, $transform){
    max-width: $w;
    max-height: $h;
@@ -17,7 +17,8 @@
    }
 }
 
-// darkmode photo
+
+// darkmode photo for intro
 @mixin photo-hover-darkmode($w, $h, $transform){
    max-width: $w;
    max-height: $h;
@@ -35,6 +36,44 @@
       }
    }
 }
+
+
+// lightmode photo for about
+@mixin about-photo-hover($w, $h, $transform){
+   max-width: $w;
+   max-height: $h;
+   margin: 10px;
+   background: $gray-light-200;
+
+   img{
+      transition: .3s ease-in-out;
+      transform: translateX(40px) translateY(-40px)
+   }
+   &:hover{
+      img{
+         transform: $transform;
+      }
+   }
+}
+
+// darkmode photo for about
+@mixin about-photo-hover-darkmode($w, $h, $transform){
+   max-width: $w;
+   max-height: $h;
+   margin: 10px;
+   background: $gray-dark-200;
+
+   img{
+      transition: .3s ease-in-out;
+      transform: translateX(40px) translateY(-40px)
+   }
+   &:hover{
+      img{
+         transform: $transform;
+      }
+   }
+}
+
 
 // Icon shadow / active
 

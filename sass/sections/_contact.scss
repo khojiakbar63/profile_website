@@ -72,7 +72,6 @@
       .block{
 
          .contact__me__title{
-
          }
          .contact__me__desc{
             color: $gray-dark-600;
@@ -114,5 +113,16 @@
             }
          }
       }
+   }
+}
+
+@media (min-width: $layout-mobile) {
+   .contact__me__desc{
+      // font-size: 12px;
+   }
+   .contacts{
+      align-self: {
+         // font-size: 40px;
+      };
    }
 }
